@@ -150,7 +150,7 @@ export default function CastAndClipsHub() {
             href="https://www.youtube.com/@BasementTalkPod/shorts"
             target="_blank"
             rel="noreferrer"
-            className="inline-block mt-2.5 px-2.5 py-3 rounded-2xl border-slate-700 border bg-slate-800 text-slate-200"
+            className="inline-block mt-2.5 px-2.5 py-3 rounded-2xl border-slate-700 border bg-slate-900 text-slate-200"
           >
             View Shorts on YouTube ↗
           </a>
