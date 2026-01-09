@@ -22,7 +22,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center flex-wrap gap-3.5">
+        <div className="flex items-center justify-center gap-3.5 md:flex-wrap">
           <a
             href={LINKS.youtube}
             target="_blank"

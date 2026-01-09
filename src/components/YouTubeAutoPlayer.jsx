@@ -108,8 +108,6 @@ export default function YouTubeAutoPlayer() {
         >
           Latest Videos ↗
         </a>
-      </div>
-      <div className="flex gap-2.5 flex-wrap mt-3">
         <a
           href={LINKS.youtube}
           target="_blank"
@@ -117,22 +115,6 @@ export default function YouTubeAutoPlayer() {
           className="px-3 py-3.5 border rounded-2xl bg-sky-400 text-slate-800 font-black border-sky-700 hover:bg-sky-600 hover:text-slate-200"
         >
           Watch on YouTube
-        </a>
-        <a
-          href={LINKS.twitch}
-          target="_blank"
-          rel="noreferrer"
-          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
-        >
-          Twitch ↗
-        </a>
-        <a
-          href={LINKS.instagram}
-          target="_blank"
-          rel="noreferrer"
-          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
-        >
-          Instagram ↗
         </a>
       </div>
     </div>

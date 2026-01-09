@@ -1,6 +1,6 @@
 export default function VideoGrid({ items, onPick }) {
   return (
-    <div className="grid grid-cols-4 gap-3">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
       {items.map((v) => (
         <button
           key={v.videoId}
