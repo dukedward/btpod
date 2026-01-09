@@ -15,7 +15,7 @@ export default function YouTubeAutoPlayer() {
 
   async function load() {
     try {
-      const res = await fetch("/api/youtube/status", { cache: "no-store" });
+      const res = await fetch("/api/youtube/status", { cache: "force-cache" });
       const data = await res.json();
       if (!data.ok) throw new Error(data.error || "Status not ok");
 
@@ -67,17 +67,7 @@ export default function YouTubeAutoPlayer() {
         ) : null}
       </div>
 
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          paddingTop: "56.25%",
-          borderRadius: 18,
-          overflow: "hidden",
-          border: "1px solid rgba(255,255,255,0.10)",
-          background: "rgba(0,0,0,0.35)",
-        }}
-      >
+      <div className="relative w-full pt-[56.25%] rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
         {src ? (
           <iframe
             title={state.isLive ? "Basement Talk Live" : "Basement Talk Latest"}
