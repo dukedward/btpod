@@ -51,38 +51,19 @@ export default function YouTubeAutoPlayer() {
 
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          marginBottom: 10,
-          flexWrap: "wrap",
-        }}
-      >
-        <div style={{ fontWeight: 900 }}>
+      <div className="flex items-center gap-2.5 mb-2.5 flex-wrap">
+        <div className="font-bold">
           {state.isLive ? "LIVE NOW" : "Latest Episode"}
         </div>
 
         {state.isLive ? (
-          <span
-            style={{
-              padding: "4px 10px",
-              borderRadius: 999,
-              background: "rgba(255,0,0,0.18)",
-              border: "1px solid rgba(255,0,0,0.35)",
-              color: "#FFD1D1",
-              fontWeight: 900,
-              fontSize: 12,
-              letterSpacing: 0.4,
-            }}
-          >
+          <span className="px-1 py-2.5 rounded-2xl border border-slate-700 text-slate-200 font-black text-sm tracking-wide">
             ● LIVE
           </span>
         ) : null}
 
         {state.title ? (
-          <span style={{ opacity: 0.75, fontSize: 13 }}>{state.title}</span>
+          <span className="text-slate-400 text-sm">{state.title}</span>
         ) : null}
       </div>
 
@@ -103,55 +84,28 @@ export default function YouTubeAutoPlayer() {
             src={src}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-              border: 0,
-            }}
+            className="absolute w-full h-full inset-0 border-0"
           />
         ) : (
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              display: "grid",
-              placeItems: "center",
-              padding: 18,
-              textAlign: "center",
-            }}
-          >
+          <div className="absolute inset-0 grid place-items-center p-4 text-center">
             <div>
-              <div style={{ fontWeight: 900, fontSize: 16 }}>
+              <div className="font-black text-base">
                 {state.loading ? "Loading stream…" : "No video found yet"}
               </div>
               {state.ok === false ? (
-                <div style={{ opacity: 0.8, marginTop: 8, fontSize: 13 }}>
-                  {state.error}
-                </div>
+                <div className="text-slate-600 mt-2 text-sm">{state.error}</div>
               ) : null}
             </div>
           </div>
         )}
       </div>
 
-      <div
-        style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 12 }}
-      >
+      <div className="flex gap-2.5 flex-wrap mt-3">
         <a
           href="https://www.youtube.com/@BasementTalkPod/live"
           target="_blank"
           rel="noreferrer"
-          style={{
-            padding: "10px 12px",
-            borderRadius: 14,
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#E9ECFF",
-            fontWeight: 800,
-            textDecoration: "none",
-          }}
+          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
         >
           YouTube Live Page ↗
         </a>
@@ -160,39 +114,17 @@ export default function YouTubeAutoPlayer() {
           href="https://www.youtube.com/@BasementTalkPod/videos"
           target="_blank"
           rel="noreferrer"
-          style={{
-            padding: "10px 12px",
-            borderRadius: 14,
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#E9ECFF",
-            fontWeight: 800,
-            textDecoration: "none",
-          }}
+          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
         >
           Latest Videos ↗
         </a>
       </div>
-      <div
-        style={{
-          display: "flex",
-          gap: 10,
-          flexWrap: "wrap",
-          marginTop: 12,
-        }}
-      >
+      <div className="flex gap-2.5 flex-wrap mt-3">
         <a
           href={LINKS.youtube}
           target="_blank"
           rel="noreferrer"
-          style={{
-            padding: "10px 12px",
-            borderRadius: 14,
-            background: "#7C5CFF",
-            color: "#070A16",
-            fontWeight: 900,
-            textDecoration: "none",
-          }}
+          className="px-2.5 py-3 rounded-2xl bg-sky-600 text-slate-800 font-bold border-sky-700 hover:bg-sky-400"
         >
           Watch on YouTube
         </a>
@@ -200,15 +132,7 @@ export default function YouTubeAutoPlayer() {
           href={LINKS.twitch}
           target="_blank"
           rel="noreferrer"
-          style={{
-            padding: "10px 12px",
-            borderRadius: 14,
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#E9ECFF",
-            fontWeight: 800,
-            textDecoration: "none",
-          }}
+          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
         >
           Twitch ↗
         </a>
@@ -216,15 +140,7 @@ export default function YouTubeAutoPlayer() {
           href={LINKS.instagram}
           target="_blank"
           rel="noreferrer"
-          style={{
-            padding: "10px 12px",
-            borderRadius: 14,
-            background: "rgba(255,255,255,0.08)",
-            border: "1px solid rgba(255,255,255,0.12)",
-            color: "#E9ECFF",
-            fontWeight: 800,
-            textDecoration: "none",
-          }}
+          className="px-2.5 py-3 rounded-2xl bg-slate-800 text-slate-200 font-bold hover:bg-slate-700"
         >
           Instagram ↗
         </a>

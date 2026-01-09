@@ -2,16 +2,7 @@ import React from "react";
 
 export default function Card({ children }) {
   return (
-    <div
-      style={{
-        border: "1px solid rgba(124, 92, 255, 0.22)",
-        background:
-          "linear-gradient(180deg, rgba(124,92,255,0.10), rgba(0,0,0,0.00))",
-        borderRadius: 18,
-        padding: 18,
-        boxShadow: "0 12px 40px rgba(0,0,0,.35)",
-      }}
-    >
+    <div className="p-4.5 border bg-slate-950 border-slate-700 shadow-lg rounded-2xl">
       {children}
     </div>
   );

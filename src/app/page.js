@@ -2,73 +2,61 @@ import Card from "@/components/Card";
 import ClipCard from "@/components/ClipCard";
 import PillLink from "@/components/PillLink";
 import YouTubeAutoPlayer from "@/components/YouTubeAutoPlayer";
-import YouTubeLiveEmbed from "@/components/YouTubeLiveEmbed";
+import CastAndClipsHub from "@/components/CastAndClipsHub";
 import { LINKS, CAST, CLIPS } from "@/lib/utils";
 
 export default function Page() {
   return (
-    <main
-      style={{ maxWidth: 1100, margin: "0 auto", padding: "26px 18px 60px" }}
-    >
+    <main className="max-w-6xl my-0 mx-auto pt-6 px-4.5 pb-14.5">
       {/* Top bar */}
-      <header
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 14,
-          flexWrap: "wrap",
-          marginBottom: 18,
-        }}
-      >
+      <header className="flex items-center justify-between gap-3.5 flex-wrap mb-5">
         <div>
-          <div style={{ opacity: 0.75, fontWeight: 700, letterSpacing: 0.4 }}>
+          <div className=" font-bold tracking-wide opacity-75 ">
             PRIME’S HOUSE PRESENTS
           </div>
-          <h1 style={{ margin: "6px 0 0", fontSize: 34, letterSpacing: -0.4 }}>
+          <h1 className=" tracking-tight mx-1.5 text-4xl ">
             The Basement Talk Podcast
           </h1>
-          <div style={{ marginTop: 8, opacity: 0.82 }}>
+          <div className=" mt-2 opacity-85 ">
             Live on YouTube • Clips • Debate • Culture • Sports • Real talk.
           </div>
         </div>
 
-        <a
-          href={LINKS.youtube}
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            padding: "12px 14px",
-            borderRadius: 16,
-            background: "#7C5CFF",
-            color: "#070A16",
-            fontWeight: 900,
-            textDecoration: "none",
-            whiteSpace: "nowrap",
-          }}
-        >
-          Watch Live ↗
-        </a>
+        <div className="flex items-center justify-center flex-wrap gap-3.5">
+          <a
+            href={LINKS.youtube}
+            target="_blank"
+            rel="noreferrer"
+            className="px-3 py-3.5 border rounded-2xl bg-sky-600 text-slate-800 font-black border-sky-700 hover:bg-sky-400"
+          >
+            Watch Live ↗
+          </a>
+          <a
+            href={LINKS.shop}
+            target="_blank"
+            rel="noreferrer"
+            className="px-3 py-3.5 border rounded-2xl bg-sky-600 text-slate-800 font-black border-sky-700 hover:bg-sky-400"
+          >
+            Shop Basement Talk ↗
+          </a>
+        </div>
       </header>
 
       {/* Grid */}
       <section
+        className="grid gap-3.5"
         style={{
-          display: "grid",
           gridTemplateColumns: "1.35fr 0.65fr",
-          gap: 14,
         }}
       >
         <Card>
           <YouTubeAutoPlayer />
         </Card>
 
-        <div style={{ display: "grid", gap: 14 }}>
+        <div className="grid gap-3.5">
           <Card>
-            <div style={{ fontWeight: 900, fontSize: 16, marginBottom: 10 }}>
-              Listen On
-            </div>
-            <div style={{ display: "grid", gap: 10 }}>
+            <div className="text-lg mb-2.5 font-black">Listen On</div>
+            <div className="grid gap-2.5">
               <PillLink href={LINKS.spotify} label="Spotify" />
               <PillLink href={LINKS.apple} label="Apple Podcasts" />
               <PillLink href={LINKS.amazon} label="Amazon Music" />
@@ -82,10 +70,8 @@ export default function Page() {
           </Card>
 
           <Card>
-            <div style={{ fontWeight: 900, fontSize: 16, marginBottom: 10 }}>
-              Follow
-            </div>
-            <div style={{ display: "grid", gap: 10 }}>
+            <div className="text-lg mb-2.5 font-black">Follow</div>
+            <div className="grid gap-2.5">
               <PillLink href={LINKS.youtube} label="YouTube" />
               <PillLink href={LINKS.tiktok} label="TikTok" />
               <PillLink href={LINKS.instagram} label="Instagram" />
@@ -97,54 +83,18 @@ export default function Page() {
       </section>
 
       {/* Cast */}
-      <section style={{ marginTop: 14 }}>
+      <section className="mt-3.5">
         <Card>
-          <div style={{ fontWeight: 900, fontSize: 16, marginBottom: 12 }}>
-            The Cast
-          </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-              gap: 12,
-            }}
-          >
-            {CAST.map((c) => (
-              <div
-                key={c.name}
-                style={{
-                  border: "1px solid rgba(255,255,255,0.10)",
-                  background: "rgba(255,255,255,0.03)",
-                  borderRadius: 16,
-                  padding: 14,
-                }}
-              >
-                <div style={{ fontWeight: 900, fontSize: 18 }}>{c.name}</div>
-                <div style={{ opacity: 0.75, marginTop: 4 }}>{c.role}</div>
-              </div>
-            ))}
-          </div>
-          <div style={{ opacity: 0.75, marginTop: 12, fontSize: 13 }}>
-            Want headshots + bios on each card? Drop 1 photo per person and the
-            tone you want (funny, serious, sports vibe, etc.).
-          </div>
+          <CastAndClipsHub />
         </Card>
       </section>
 
       {/* Clips */}
-      <section style={{ marginTop: 14 }}>
+      <section className="mt-3.5">
         <Card>
-          <div style={{ fontWeight: 900, fontSize: 16, marginBottom: 12 }}>
-            Clips
-          </div>
+          <div className="text-lg mb-3 font-black">Clips</div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-              gap: 12,
-            }}
-          >
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
             {CLIPS.map((c) => (
               <ClipCard
                 key={c.title}
@@ -154,43 +104,16 @@ export default function Page() {
               />
             ))}
           </div>
-
-          <div style={{ opacity: 0.75, marginTop: 12, fontSize: 13 }}>
-            Want a real “clips gallery” here? If you tell me where you post
-            clips most (TikTok vs Shorts), I can wire in an embed grid or a
-            lightweight list that won’t slow the page down.
-          </div>
         </Card>
-
-        <style>{`
-    @media (max-width: 920px) {
-      section div[style*="repeat(3"] {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  `}</style>
       </section>
 
       {/* Footer */}
-      <footer
-        style={{
-          marginTop: 18,
-          opacity: 0.75,
-          fontSize: 13,
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: 10,
-        }}
-      >
+      <footer className="mt-4.5 text-sm flex justify-between flex-wrap gap-2.5 text-slate-500">
         <div>
           © {new Date().getFullYear()} The Basement Talk • A Prime’s House
           Podcast
         </div>
-        <a
-          href="https://www.primeshouse.com"
-          style={{ color: "#B9C2FF", textDecoration: "none" }}
-        >
+        <a href="https://www.primeshouse.com" className="text-slate-300">
           Back to Prime’s House ↗
         </a>
       </footer>

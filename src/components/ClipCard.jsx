@@ -4,21 +4,13 @@ export default function ClipCard({ title, href, note }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      style={{
-        display: "block",
-        borderRadius: 16,
-        padding: 14,
-        textDecoration: "none",
-        color: "#E9ECFF",
-        border: "1px solid rgba(255,255,255,0.10)",
-        background: "rgba(255,255,255,0.03)",
-      }}
+      className="block rounded-2xl p-3.5 text-slate-200 border border-slate-700 bg-slate-800"
     >
-      <div style={{ fontWeight: 900, fontSize: 16 }}>{title}</div>
+      <div className="font-black text-base">{title}</div>
       {note ? (
-        <div style={{ opacity: 0.75, marginTop: 6, fontSize: 13 }}>{note}</div>
+        <div className="text-slate-500 mt-1.5 text-sm">{note}</div>
       ) : null}
-      <div style={{ opacity: 0.7, marginTop: 10, fontWeight: 800 }}>Open ↗</div>
+      <div className="text-slate-600 mt-1.5 font-extrabold">Open ↗</div>
     </a>
   );
 }

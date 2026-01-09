@@ -11,13 +11,50 @@ export const LINKS = {
   instagram: "https://www.instagram.com/basementtalkpod/",
   twitter: "https://twitter.com/BasementTalkPod",
   twitch: "https://www.twitch.tv/basementtalkpod",
+  shop: "https://www.primeshouse.com/shop?Category=Basement%2520Talk",
 };
 
 export const CAST = [
-  { name: "TD", role: "Co-Host" },
-  { name: "Ed", role: "Co-Host" },
-  { name: "Teddy", role: "Co-Host" },
-  { name: "Murk", role: "Co-Host" },
+  {
+    name: "TD",
+    role: "Co-Host",
+    number: "21",
+    img: "/cast/td.jpg",
+    stats: [
+      { label: "Energy", value: "Elite" },
+      { label: "Breakdowns", value: "A+" },
+    ],
+  },
+  {
+    name: "Ed",
+    role: "Co-Host",
+    number: "01",
+    img: "/cast/ed.jpg",
+    stats: [
+      { label: "Hot Takes", value: "99" },
+      { label: "Games Won", value: "∞" },
+    ],
+  },
+  {
+    name: "Teddy",
+    role: "Co-Host",
+    number: "03",
+    img: "/cast/teddy.jpg",
+    stats: [
+      { label: "Ayoos", value: "A+" },
+      { label: "Rings", value: "2" },
+    ],
+  },
+  {
+    name: "Murk",
+    role: "Co-Host",
+    number: "33",
+    img: "/cast/murk.jpg",
+    stats: [
+      { label: "Bias", value: "Low" },
+      { label: "Clips", value: "Viral" },
+    ],
+  },
 ];
 
 export const CLIPS = [
