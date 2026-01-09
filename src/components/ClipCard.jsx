@@ -4,7 +4,7 @@ export default function ClipCard({ title, href, note }) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="block rounded-2xl p-3.5 text-slate-200 border border-slate-700 bg-slate-900"
+      className="block rounded-2xl p-3.5 text-slate-200 border border-slate-700 bg-slate-900 hover:bg-slate-800"
     >
       <div className="font-black text-base">{title}</div>
       {note ? (

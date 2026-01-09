@@ -124,7 +124,7 @@ export default function YouTubeAutoPlayer() {
           href={LINKS.youtube}
           target="_blank"
           rel="noreferrer"
-          className="px-2.5 py-3 rounded-2xl bg-sky-600 text-slate-800 font-bold border-sky-700 hover:bg-sky-400"
+          className="px-3 py-3.5 border rounded-2xl bg-sky-400 text-slate-800 font-black border-sky-700 hover:bg-sky-600 hover:text-slate-200"
         >
           Watch on YouTube
         </a>
