@@ -150,7 +150,7 @@ export default function CastAndClipsHub() {
             href="https://www.youtube.com/@BasementTalkPod/shorts"
             target="_blank"
             rel="noreferrer"
-            className="inline-block mt-2.5 px-2.5 py-3 rounded-2xl border-slate-800 border bg-slate-700 text-slate-400"
+            className="inline-block mt-2.5 px-2.5 py-3 rounded-2xl border-slate-700 border bg-slate-800 text-slate-200"
           >
             View Shorts on YouTube ↗
           </a>
@@ -167,7 +167,7 @@ export default function CastAndClipsHub() {
           }
         />
       ) : (
-        <div className="text-slate-400">No Shorts found yet.</div>
+        <div className="text-slate-200">No Shorts found yet.</div>
       )}
 
       {/* CAST MODAL */}
@@ -212,30 +212,14 @@ export default function CastAndClipsHub() {
         title={player.title || "Video"}
         onClose={() => setPlayer({ open: false, title: "", videoId: null })}
       >
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            paddingTop: "56.25%",
-            borderRadius: 18,
-            overflow: "hidden",
-            border: "1px solid rgba(148,163,184,0.18)",
-            background: "rgba(2,6,23,0.35)",
-          }}
-        >
+        <div className="relative w-full pt-[56.25%] rounded-2xl overflow-hidden border border-slate-700 bg-slate-800">
           {playerSrc ? (
             <iframe
               title={player.title || "Player"}
               src={playerSrc}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                border: 0,
-              }}
+              className="absolute inset-0 w-full h-full border-0"
             />
           ) : null}
         </div>
